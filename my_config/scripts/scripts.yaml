@@ -1,0 +1,5 @@
+ha_released_update:
+    alias: HA Released version update from server
+    sequence:
+      service: homeassistant.update_entity
+      entity_id: sensor.ha_latest_version

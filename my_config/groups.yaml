@@ -1,0 +1,4 @@
+miscellaneous:
+  name: Restart
+  entities:
+    - script.restart_ha

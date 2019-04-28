@@ -1,0 +1,24 @@
+# Sensors
+- platform: command_line
+  name: CPU Temp
+  command: 'cat /sys/class/thermal/thermal_zone0/temp'
+  unit_of_measurement: '°C'
+  value_template: '{{ value | multiply(0.001) }}'
+- platform: mqtt
+  name: Humidity
+  state_topic: 'zigbee2mqtt/0x00158d0002e92796'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+  availability_topic: 'zigbee2mqtt/bridge/state'
+- platform: mqtt
+  name: Temperature
+  state_topic: 'zigbee2mqtt/0x00158d0002e92796'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+  availability_topic: 'zigbee2mqtt/bridge/state'
+- platform: mqtt
+  name: Pressure
+  state_topic: 'zigbee2mqtt/0x00158d0002e92796'
+  unit_of_measurement: 'hPa'
+  value_template: '{{ value_json.pressure }}'
+  availability_topic: 'zigbee2mqtt/bridge/state'

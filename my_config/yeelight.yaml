@@ -1,0 +1,7 @@
+devices:
+    10.0.1.204:
+      name: baby_room_floor_lamp
+      save_on_change: true
+      transition: 750
+      use_music_mode: false
+      model: color1

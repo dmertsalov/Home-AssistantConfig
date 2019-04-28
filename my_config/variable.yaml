@@ -1,0 +1,4 @@
+auto_timer_desk_lamp:
+    name: auto_timer_desk_lamp
+    value: false
+    restore: true

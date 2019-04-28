@@ -1,0 +1,9 @@
+- alias: system_weather_to_telegram
+  initial_state: 'on'
+  trigger:
+    - platform: time
+      at: '18:35:00'
+    - platform: time
+      at: '06:00:00'
+  action:
+  - service: script.telegram_weather

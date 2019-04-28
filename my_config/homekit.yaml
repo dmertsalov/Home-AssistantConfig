@@ -1,0 +1,12 @@
+port: 51828 
+auto_start: true
+filter:
+  include_domains:
+    - switch
+    - binary_sensor
+    - light
+    - sensor
+  include_entities:
+    - script.set_cabinet_desk_lamp_custom
+  exclude_entities:
+    - sensor.cpu_temperature

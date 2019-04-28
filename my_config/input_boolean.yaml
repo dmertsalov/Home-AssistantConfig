@@ -1,0 +1,7 @@
+auto_turn_off_cabinet_desk_lamp:
+    name: Auto turn off 5 min
+    icon: mdi:desk-lamp
+
+auto_turn_off_baby_floor_lamp:
+    name: Auto turn off 5 min 
+    icon: mdi:floor-lamp

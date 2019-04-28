@@ -1,0 +1,40 @@
+set_cabinet_desk_lamp_custom:
+    alias: warm 70%
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.cabinet_desk_lamp
+          brightness_pct: 70
+          color_temp: 333
+
+cabinet_desk_lamp_turned_off_5min:
+    sequence:
+      - condition: state
+        entity_id: input_boolean.auto_turn_off_cabinet_desk_lamp
+        state: 'on'
+      - delay: '00:05:00'
+      - service: script.cabinet_desk_lamp_turn_off_with_condition
+
+cabinet_desk_lamp_turn_off_with_condition:
+    sequence:
+      - condition: state
+        entity_id: input_boolean.auto_turn_off_cabinet_desk_lamp
+        state: 'on'
+      - service: light.turn_off
+        entity_id: light.cabinet_desk_lamp
+        
+baby_floor_lamp_turned_off_5min:
+    sequence:
+      - condition: state
+        entity_id: input_boolean.auto_turn_off_baby_floor_lamp
+        state: 'on'
+      - delay: '00:05:00'
+      - service: script.baby_floor_lamp_turn_off_with_condition
+
+baby_floor_lamp_turn_off_with_condition:
+    sequence:
+      - condition: state
+        entity_id: input_boolean.auto_turn_off_baby_floor_lamp
+        state: 'on'
+      - service: light.turn_off
+        entity_id: light.baby_room_floor_lamp

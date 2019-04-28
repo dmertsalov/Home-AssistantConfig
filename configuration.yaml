@@ -1,0 +1,23 @@
+default_config:
+discovery:
+homeassistant: !include homeassistant.yaml
+automation: !include_dir_merge_list my_config/automation
+sensor: !include_dir_merge_list my_config/sensors
+script: !include_dir_merge_named my_config/scripts
+lovelace: !include my_config/lovelace.yaml
+frontend: !include frontend.yaml
+timer: !include my_config/timer.yaml
+light: !include my_config/light.yaml
+yeelight: !include my_config/yeelight.yaml
+binary_sensor: !include my_config/sensors/binary_sensor.yaml
+group: !include my_config/groups.yaml
+weather: !include my_config/weather.yaml
+device_tracker: !include my_config/device_tracker.yaml
+input_boolean: !include my_config/input_boolean.yaml
+variable: !include my_config/variable.yaml
+homekit: !include my_config/homekit.yaml
+mqtt: !include my_config/mqtt.yaml
+notify: !include my_config/notify.yaml
+telegram_bot: !include my_config/telegram_bot.yaml
+
+

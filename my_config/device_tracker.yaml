@@ -1,0 +1,4 @@
+  - platform: ping
+    hosts:
+      raspberry: !secret raspberry
+      iphone8: !secret iphone8

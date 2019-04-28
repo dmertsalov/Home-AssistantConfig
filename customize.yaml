@@ -1,0 +1,10 @@
+binary_sensor.iphone_denis:
+  icon: mdi:cellphone-iphone
+sensor.humidity:
+  icon: mdi:water-percent
+light.cabinet_desk_lamp:
+  friendly_name: Desk Lamp
+  icon: mdi:desk-lamp
+yeelight.baby_room_floor_lamp:
+  friendly_name: Floor Lamp
+  icon: mdi:floor-lamp

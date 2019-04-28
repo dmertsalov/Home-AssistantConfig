@@ -1,0 +1,46 @@
+- alias: Turn ON light
+  trigger:
+    platform: time
+    at: '23:40:00'
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.cabinet_desk_lamp
+
+# Cabinet_Desk_lamp
+- alias: did change state auto turn off cabinet desk lamp
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: input_boolean.auto_turn_off_cabinet_desk_lamp
+    to: 'on'
+  action:
+    - service: script.cabinet_desk_lamp_turned_off_5min
+
+- alias: did change state cabinet desk lamp
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: light.cabinet_desk_lamp
+    to: 'on'
+  action:
+    - service: script.cabinet_desk_lamp_turned_off_5min
+
+# Baby_room_Floor_lamp
+- alias: did change state auto turn off baby floor lamp
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: input_boolean.auto_turn_off_baby_floor_lamp
+    to: 'on'
+  action:
+    - service: script.baby_floor_lamp_turned_off_5min
+
+- alias: did change state baby room floor lamp
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: light.baby_room_floor_lamp
+    to: 'on'
+  action:
+    - service: script.baby_floor_lamp_turned_off_5min

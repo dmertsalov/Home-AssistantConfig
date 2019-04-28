@@ -1,0 +1,5 @@
+  - platform: xiaomi_miio
+    name: cabinet_desk_lamp
+    host: 10.0.1.203
+    token: 4d6ca5655a644b6ba07ad647eb27b63e
+    model: philips.light.bulb

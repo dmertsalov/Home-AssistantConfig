@@ -1,0 +1,15 @@
+broker: !secret broker
+port: 1883
+username: user                 
+password: raspberry               
+client_id: homeassistant
+birth_message:
+  topic: 'hass/status'
+  payload: 'online'
+  qos: 1
+  retain: true
+will_message:
+  topic: 'hass/status'
+  payload: 'offline'
+  qos: 1
+  retain: true
