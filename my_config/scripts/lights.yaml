@@ -22,6 +22,8 @@ cabinet_desk_lamp_turn_off_with_condition:
         state: 'on'
       - service: light.turn_off
         entity_id: light.cabinet_desk_lamp
+      - service: homeassistant.turn_off
+        entity_id: input_boolean.auto_turn_off_cabinet_desk_lamp
         
 baby_floor_lamp_turned_off_5min:
     sequence:
@@ -38,3 +40,5 @@ baby_floor_lamp_turn_off_with_condition:
         state: 'on'
       - service: light.turn_off
         entity_id: light.baby_room_floor_lamp
+      - service: homeassistant.turn_off
+        entity_id: input_boolean.auto_turn_off_baby_floor_lamp

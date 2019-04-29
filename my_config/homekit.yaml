@@ -5,8 +5,8 @@ filter:
     - switch
     - binary_sensor
     - light
-    - sensor
   include_entities:
+    - sensor.temperature
     - script.set_cabinet_desk_lamp_custom
   exclude_entities:
     - sensor.cpu_temperature
