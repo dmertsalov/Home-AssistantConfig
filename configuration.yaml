@@ -19,5 +19,4 @@ homekit: !include my_config/homekit.yaml
 mqtt: !include my_config/mqtt.yaml
 notify: !include my_config/notify.yaml
 telegram_bot: !include my_config/telegram_bot.yaml
-
-
+switch: !include my_config/switch.yaml

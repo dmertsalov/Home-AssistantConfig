@@ -61,6 +61,9 @@ views:
             name: Humidity
           - entity: sensor.pressure
             name: Pressure
+          - entity: sensor.linkquality
+            name: Linkquality
+            icon: mdi:wifi
   - type: entities
     show_header_toggle: false
     title: Baby room
@@ -69,6 +72,14 @@ views:
       name: Floor lamp
       icon: mdi:floor-lamp
     - entity: input_boolean.auto_turn_off_baby_floor_lamp
+  - type: entities
+    show_header_toggle: false
+    title: Outdoor lights
+    entities:
+      - entity: switch.outdoor_light
+      - entity: sensor.zonoff_linkquality
+        name: Linkquality
+        icon: mdi:wifi
   - type: custom:weather-card
     entity: weather.dark_sky
     icons: "/local/icons/"

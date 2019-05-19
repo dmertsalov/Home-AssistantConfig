@@ -8,3 +8,6 @@ light.cabinet_desk_lamp:
 yeelight.baby_room_floor_lamp:
   friendly_name: Floor Lamp
   icon: mdi:floor-lamp
+switch.outdoor_light:
+  friendly_name: Outdoor light
+  icon: mdi:wall-sconce

@@ -22,3 +22,15 @@
   unit_of_measurement: 'hPa'
   value_template: '{{ value_json.pressure }}'
   availability_topic: 'zigbee2mqtt/bridge/state'
+- platform: mqtt
+  name: Linkquality
+  state_topic: 'zigbee2mqtt/0x00158d0002e92796'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.linkquality }}'
+  availability_topic: 'zigbee2mqtt/bridge/state'
+- platform: mqtt
+  name: zonoff_linkquality
+  state_topic: 'zigbee2mqtt/0x01124b001bae9cc4'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.linkquality }}'
+  availability_topic: 'zigbee2mqtt/bridge/state'

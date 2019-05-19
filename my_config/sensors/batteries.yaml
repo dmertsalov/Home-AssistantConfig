@@ -1,0 +1,7 @@
+# - platform: template
+#   sensors:
+#     battery_temperature:
+#       friendly_name: "Battery Temperature"
+#       unit_of_measurement: '%'
+#       value_template: "{{ state_attr('sensor.Temperature', 'battery_level') | round(0) }}"
+#       device_class: "battery"
