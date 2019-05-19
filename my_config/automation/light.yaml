@@ -45,6 +45,7 @@
   action:
     - service: script.baby_floor_lamp_turned_off_5min
 
+# Outdoor light
 - alias: turn on outdoor light after sunset
   trigger:
     platform: sun
