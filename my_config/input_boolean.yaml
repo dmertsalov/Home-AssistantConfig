@@ -1,11 +1,11 @@
 auto_turn_off_cabinet_desk_lamp:
     name: Auto turn off 5 min
-    icon: mdi:desk-lamp
+    icon: mdi:timer
 
 auto_turn_off_baby_floor_lamp:
     name: Auto turn off 5 min 
-    icon: mdi:floor-lamp
+    icon: mdi:timer
 
 auto_turn_on_off_by_sunset_sunrise:
     name: Auto turn on/off by sunset/sunrise
-    icon: mdi:wall-sconce
+    icon: mdi:weather-sunset-down
