@@ -52,3 +52,11 @@
   action:
     service: homeassistant.turn_on
     entity_id: switch.outdoor_light
+  
+- alias: turn off outdoor light after sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.outdoor_light
