@@ -1,46 +1,46 @@
-# ############################################################################
-# Weather sensors
-# ############################################################################
-  - platform: darksky
-    api_key: !secret darksky_api_key
-    language: ru
-    units: si
-    scan_interval: '00:30:00'
-    forecast:
-      - 0
-      - 1
-    monitored_conditions:
-      - hourly_summary
-      - temperature
-      - temperature_high
-      - temperature_low
-      - apparent_temperature
-      - cloud_cover
-      - precip_type
-      - precip_probability
-      - precip_intensity
-      - wind_speed
-      - wind_bearing
-      - wind_gust
-      - humidity
-      - dew_point
-      - uv_index
-      - visibility
-      - ozone
-      - pressure
+# # ############################################################################
+# # Weather sensors
+# # ############################################################################
+#   - platform: darksky
+#     api_key: !secret darksky_api_key
+#     language: ru
+#     units: si
+#     scan_interval: '00:30:00'
+#     forecast:
+#       - 0
+#       - 1
+#     monitored_conditions:
+#       - hourly_summary
+#       - temperature
+#       - temperature_high
+#       - temperature_low
+#       - apparent_temperature
+#       - cloud_cover
+#       - precip_type
+#       - precip_probability
+#       - precip_intensity
+#       - wind_speed
+#       - wind_bearing
+#       - wind_gust
+#       - humidity
+#       - dew_point
+#       - uv_index
+#       - visibility
+#       - ozone
+#       - pressure
 
-# ############################################################################
-# Pressure sensors conversion
-# ############################################################################
-  - platform: template
-    sensors:
-      pressure_mmhg_in:
-        value_template: "{{ (states('sensor.pressure_158d000237167c')|float * 0.750062)|round(0) }}"
-        unit_of_measurement: "mmHG"
-        device_class: pressure
-        friendly_name: Inside pressure
-      pressure_mmhg_out:
-        value_template: "{{ (states('sensor.dark_sky_pressure')|float * 0.750062)|round(0) }}"
-        unit_of_measurement: "mmHG"
-        device_class: pressure
-        friendly_name: Outside pressure
+# # ############################################################################
+# # Pressure sensors conversion
+# # ############################################################################
+#   - platform: template
+#     sensors:
+#       pressure_mmhg_in:
+#         value_template: "{{ (states('sensor.pressure_158d000237167c')|float * 0.750062)|round(0) }}"
+#         unit_of_measurement: "mmHG"
+#         device_class: pressure
+#         friendly_name: Inside pressure
+#       pressure_mmhg_out:
+#         value_template: "{{ (states('sensor.dark_sky_pressure')|float * 0.750062)|round(0) }}"
+#         unit_of_measurement: "mmHG"
+#         device_class: pressure
+#         friendly_name: Outside pressure

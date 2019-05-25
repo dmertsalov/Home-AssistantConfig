@@ -20,3 +20,6 @@ mqtt: !include my_config/mqtt.yaml
 notify: !include my_config/notify.yaml
 telegram_bot: !include my_config/telegram_bot.yaml
 switch: !include my_config/switch.yaml
+xiaomi_aqara: !include my_config/gateways.yaml
+recorder:
+  purge_keep_days: 3

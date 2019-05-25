@@ -11,3 +11,6 @@ yeelight.baby_room_floor_lamp:
 switch.outdoor_light:
   friendly_name: Outdoor light
   icon: mdi:wall-sconce
+light.gateway_light_7811dcfadbf9:
+  friendly_name: Night light
+  icon: mdi:wall-sconce

@@ -81,6 +81,12 @@ views:
       - entity: sensor.zonoff_linkquality
         name: Linkquality
         icon: mdi:wifi
+  - type: entities
+    show_header_toggle: false
+    title: Stairway
+    entities:
+      - entity: light.gateway_light_7811dcfadbf9
+      - entity: input_boolean.auto_turn_on_nightlight_with_motion
   - type: custom:weather-card
     entity: weather.dark_sky
     icons: "/local/icons/"
