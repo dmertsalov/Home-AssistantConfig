@@ -3,19 +3,21 @@
     host: 10.0.1.203
     token: 0a0e4f4fd8c0ca9c5fc8903838244fed
     model: philips.light.bulb
-  # - platform: mqtt
-  #   schema: json
-  #   name: mqtt_json_light_1
-  #   state_topic: "zigbee2mqtt/0x00158d0002d758e8"
-  #   command_topic: "zigbee2mqtt/0x00158d0002d758e8/set"
-  #   brightness: true
-  # - platform: mqtt
-  #   name: "Desk lamp"
-  #   state_topic: "zigbee2mqtt/0x00158d0002d758e8"
-  #   command_topic: "zigbee2mqtt/0x00158d0002d758e8/set"
-  #   brightness_state_topic: 'zigbee2mqtt/0x00158d0002d758e8/brightness'
-  #   brightness_command_topic: 'zigbee2mqtt/0x00158d0002d758e8/brightness/set'
-  #   qos: 0
-  #   payload_on: "ON"
-  #   payload_off: "OFF"
-  #   optimistic: false
+ 
+  - platform: mqtt
+    schema: json
+    command_topic: 'zigbee2mqtt/0x00158d0002d75896/set'
+    state_topic: 'zigbee2mqtt/0x00158d0002d75896'
+    availability_topic: 'zigbee2mqtt/bridge/state'
+    name: hall_light
+    brightness: true
+    color_temp: true
+
+  - platform: mqtt
+    schema: json
+    command_topic: 'zigbee2mqtt/0x00158d0002d758e8/set'
+    state_topic: 'zigbee2mqtt/0x00158d0002d758e8'
+    availability_topic: 'zigbee2mqtt/bridge/state'
+    name: kitchen_light
+    brightness: true
+    color_temp: true

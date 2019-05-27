@@ -1,5 +1,5 @@
 discovery_retry: 10
 gateways:
   mac: 7811DCFADBF9
-  key: 91BC43383A204FBC
+  key: !secret gateway2Key
   host: 10.0.1.205

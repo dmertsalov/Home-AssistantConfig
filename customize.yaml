@@ -14,3 +14,5 @@ switch.outdoor_light:
 light.gateway_light_7811dcfadbf9:
   friendly_name: Night light
   icon: mdi:wall-sconce
+switch.imac_power:
+  icon: mdi:desktop-mac
