@@ -1,11 +1,3 @@
-- platform: "mqtt"
-  name: outdoor_light
-  state_topic: "zigbee2mqtt/0x01124b001bae9cc4"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_off: "OFF"
-  payload_on: "ON"
-  value_template: "{{ value_json.state }}"
-  command_topic: "zigbee2mqtt/0x01124b001bae9cc4/set"
 - platform: command_line
   switches:
     imac_power:

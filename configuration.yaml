@@ -1,4 +1,5 @@
 default_config:
+sun:
 discovery:
 homeassistant: !include homeassistant.yaml
 automation: !include_dir_merge_list my_config/automation
@@ -23,3 +24,8 @@ switch: !include my_config/switch.yaml
 xiaomi_aqara: !include my_config/gateways.yaml
 recorder:
   purge_keep_days: 3
+logger:
+  default: info
+  logs:
+    pydeconz: debug
+    homeassistant.components.deconz: debug

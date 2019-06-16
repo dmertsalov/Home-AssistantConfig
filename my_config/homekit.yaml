@@ -6,7 +6,7 @@ filter:
     - binary_sensor
     - light
   include_entities:
-    - sensor.temperature
+    - sensor.temperature_2
     - script.set_cabinet_desk_lamp_custom
   exclude_entities:
     - sensor.cpu_temperature

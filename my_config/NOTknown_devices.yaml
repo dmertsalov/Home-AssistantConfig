@@ -1,0 +1,19 @@
+# - imac:
+#     hide_if_away: false
+#     icon:
+#     mac: 88:63:DF:BF:C6:0F
+#     name: iMac
+#     picture:
+#     track: false
+# - iPhone:
+#     name: iPhone
+#     mac: B0:19:C6:A5:B8:0F
+#     picture: mdi:cellphone-iphone
+#     track: true
+#     hide_if_away: true
+# - AppleWatchDenis:
+#     name: AppleWatchDenis
+#     mac: 34:7C:25:C3:B6:E2
+#     picture: mdi:watch-variant
+#     track: true
+#     hide_if_away: true
