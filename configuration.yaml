@@ -1,5 +1,7 @@
 default_config:
 sun:
+ffmpeg:
+  ffmpeg_bin: /usr/bin/ffmpeg
 discovery:
 homeassistant: !include homeassistant.yaml
 automation: !include_dir_merge_list my_config/automation
@@ -29,3 +31,9 @@ logger:
   logs:
     pydeconz: debug
     homeassistant.components.deconz: debug
+
+camera:
+  - platform: ffmpeg
+    name: road_camera
+    input: !secret road_camera_url
+    extra_arguments: -vf scale=640:360

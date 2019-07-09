@@ -1,21 +1,21 @@
-- alias: Denis at home
-  trigger:
-    - platform: state
-      entity_id: device_tracker.34_7c_25_c3_b6_e2
-      from: 'not_home'
-      to: 'home'
-  action:
-    - service: notify.telegram
-      data_template:
-        message: "Denis in home"
+# - alias: Denis at home
+#   trigger:
+#     - platform: state
+#       entity_id: device_tracker.34_7c_25_c3_b6_e2
+#       from: 'not_home'
+#       to: 'home'
+#   action:
+#     - service: notify.telegram
+#       data_template:
+#         message: "Denis in home"
 
-- alias: Denis out of home
-  trigger:
-    - platform: state
-      entity_id: device_tracker.34_7c_25_c3_b6_e2
-      from: 'home'
-      to: 'not_home'
-  action:
-    - service: notify.telegram
-      data_template:
-        message: "Denis out of home"
+# - alias: Denis out of home
+#   trigger:
+#     - platform: state
+#       entity_id: device_tracker.34_7c_25_c3_b6_e2
+#       from: 'home'
+#       to: 'not_home'
+#   action:
+#     - service: notify.telegram
+#       data_template:
+#         message: "Denis out of home"

@@ -17,6 +17,8 @@ resources:
     type: module
   - url: /local/tiles-card.js?v=0.1
     type: js
+  - url: /local/camera-card.js
+    type: js
 
 name: Our home 
 views:
@@ -29,9 +31,13 @@ views:
     show_header_toggle: false
     title: Cabinet
     entities:
+      - entity: sensor.temperature_8
+        name: Temperature
+      - entity: sensor.humidity_9
+        name: Humidity
       - entity: light.cabinet_desk_lamp
-      - entity: input_boolean.auto_turn_off_cabinet_desk_lamp
       - type: divider
+      - entity: input_boolean.auto_turn_off_cabinet_desk_lamp
       - entity: script.set_cabinet_desk_lamp_custom
         tap_action: 
           action: toggle
@@ -65,6 +71,7 @@ views:
     show_header_toggle: false
     title: Baby room
     entities:
+    - entity: light.hall_light_2
     - entity: light.baby_room_floor_lamp
       name: Floor lamp
       icon: mdi:floor-lamp
@@ -79,7 +86,6 @@ views:
     show_header_toggle: false
     title: Stairway
     entities:
-      - entity: light.hall_light_2
       - entity: light.gateway_light_7811dcfadbf9
       - entity: input_boolean.auto_turn_on_nightlight_with_motion
   - type: entities
@@ -94,3 +100,8 @@ views:
   - type: custom:weather-card
     entity: weather.dark_sky
     icons: "/local/icons/"
+  - type: horizontal-stack
+    #title: Camers
+    cards:
+      - type: 'custom:camera-card'
+        entity: camera.road_camera

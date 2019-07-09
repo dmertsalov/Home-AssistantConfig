@@ -5,6 +5,7 @@ filter:
     - switch
     - binary_sensor
     - light
+    - camera
   include_entities:
     - sensor.temperature_2
     - script.set_cabinet_desk_lamp_custom
